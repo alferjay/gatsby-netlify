@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap"
 
 export default () => {
   return (
-    <PrimaryLayout className="col-12">
+    <PrimaryLayout className="col-12" className="col">
       <div className="pt-5">
         <h1>Contact Us</h1>
         <Form>

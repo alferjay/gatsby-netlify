@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <span className="text-muted">&copy; Gatsby Bootstrap 2020</span>
+        <span className="text-dark">&copy; Gatsby Bootstrap 2020</span>
       </div>
     </footer>
   )
