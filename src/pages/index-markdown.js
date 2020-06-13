@@ -6,13 +6,13 @@ import Post from "../components/Post"
 export default function Home({ data }) {
   return (
     <PrimaryLayout>
-      {data.allWordpressPost.nodes.map((node, index) => (
+      {data.allMarkdownRemark.nodes.map((node, index) => (
         <Post
           key={index}
-          image={node.featured_media.source_url}
-          title={node.title}
+          image={node.frontmatter.image}
+          title={node.frontmatter.title}
           excerpt={node.excerpt}
-          readMore={node.slug}
+          readMore={node.fields.slug}
         />
       ))}
     </PrimaryLayout>
@@ -21,13 +21,18 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    allWordpressPost {
+    allMarkdownRemark {
       nodes {
-        slug
-        title
+        frontmatter {
+          title
+          date
+          keywords
+          image
+        }
         excerpt
-        featured_media {
-          source_url
+        html
+        fields {
+          slug
         }
       }
     }
