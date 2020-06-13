@@ -8,9 +8,11 @@ function PrimaryLayout({ children, className = "col-3" }) {
     <div>
       <SEO />
       <Header title="Homepage" />
-      <div className="container">
-        <div className="row p-5">{children}</div>
-      </div>
+      <main>
+        <div className="container">
+          <div className="row p-5">{children}</div>
+        </div>
+      </main>
       <Footer />
     </div>
   )
