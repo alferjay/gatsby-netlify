@@ -4,8 +4,8 @@ import { Form, Button } from "react-bootstrap"
 
 export default () => {
   return (
-    <PrimaryLayout className="col-12" className="col">
-      <div className="pt-5">
+    <PrimaryLayout>
+      <div className="pt-5 col-md-10 justify-content-center">
         <h1>Contact Us</h1>
         <Form>
           <Form.Group controlId="contactForm.Email">

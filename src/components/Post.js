@@ -6,13 +6,15 @@ import innertext from "innertext"
 
 function Post(props) {
   return (
-    <article>
-      <div className="p-3" className="col-md-6 col-xs-6">
+    <article className="col-lg-6 col-xs-6">
+      <div className="p-2">
         <Card>
           <Card.Img variant="top" src={image} alt={innertext(props.title)} />
           <Card.Body>
             <Card.Title dangerouslySetInnerHTML={{ __html: props.title }} />
-            <Card.Text dangerouslySetInnerHTML={{ __html: props.excerpt }} />
+            <Card.Text>
+              <div dangerouslySetInnerHTML={{ __html: props.excerpt }} />
+            </Card.Text>
             <Button variant="warning" as={Link} to={props.readMore}>
               Read More...{" "}
             </Button>
