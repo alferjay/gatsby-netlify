@@ -9,7 +9,9 @@ export default function Home({ data }) {
       {data.allWordpressPost.nodes.map((node, index) => (
         <Post
           key={index}
-          image={node.featured_media.source_url}
+          // image={
+          //   node.featured_media.source_url ? node.featured_media.source_url : ""
+          // }
           title={node.title}
           excerpt={node.excerpt}
           readMore={node.slug}

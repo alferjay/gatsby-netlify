@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `localhost/anderson`,
+        baseUrl: `dev.copex.ae`,
         protocol: `http`,
         hostingWPCOM: false,
       },
